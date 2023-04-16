@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./shara_desert.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.container_1{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    margin-top: 30px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+.navbar{
+   margin-right: 150px;
+   margin-top: 20px;
+}
+.navbar ul{
+    float: left;
+    padding-top: 12px;
+    padding-left: 0px;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 15px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar-icon{
+    float: right;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.container_2{
+    display: flex;
+}
+.sahara{
+    margin-top: 190px;
+    margin-left: 120px;
+}
+
+.sahara h1{
+font-weight: bolder;
+font-size: 110px;
+}
+.sahara p{
+    line-height: 1.5;
+}
+.explore{
+    background-color: white;
+    border-style: hidden;
+    font:14px Georgia, serif;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+.content{
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 200px;
+    margin-left: 100px;
+    justify-content: space-between;
+}
+.box{
+    border-radius: 15px;
+    height: 250px;
+    width: 220px;
+    padding: 15px 25px;
+    background-size: cover;
+}
+.box:hover{
+    margin-top: -10px;
+}
+.box h4{
+    text-shadow: 1px 0px 2px white ;
+}
+.box p{
+    font-size: 9px;
+    line-height: 3;
+}
+.box1{
+    background-image: url(./pic-1.png);
+}
+.box2{
+    background-image:  url(./pic-2.png);
+}
+.box3{
+    background-image: url(./pic-3.png);
+}
+.box4{
+    background-image: url(./pic-4.png);
+}
+
+@media only screen and ( max-width: 856px ) and (min-width: 500px )
+{
+    body{
+        /* background-blend-mode: multiply; */
+        background-size: auto ;
+        background-repeat: repeat;
+    }
+    .logo{
+        margin-left: 80px;
+    }
+    .navbar{
+       margin-right: 80px;
+    }
+    .container_2{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .sahara{
+        margin: 0px 80px;
+    }
+    .sahara h1{
+    font-size: 40px;
+    }
+    .explore:hover{
+        margin-bottom: 10px;
+    }
+
+    .content{
+        height: 1100px;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .box{
+        width: 100%;
+        background-position: center;
+    } 
+}
