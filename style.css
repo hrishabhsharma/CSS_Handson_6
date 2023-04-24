@@ -12,48 +12,46 @@ body{
 .container_1{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 .logo{
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 120px;
     cursor: pointer;
 }
 .navbar{
-   margin-right: 150px;
-   margin-top: 20px;
+    display: flex;
+    height: 48px;
+    margin-right: 150px;
 }
-.navbar ul{
-    float: left;
-    padding-top: 12px;
-    padding-left: 0px;
-}
-.navbar ul li{
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 60px;
+.navbar>div{
     font-size: 15px;
+    margin-right: 60px;
+    align-self: center;
 }
-li a{
+a{
     text-decoration: none;
     color: white;
 }
 .navbar-icon{
-    float: right;
-    margin-left: 40px;
+    height: 48px;
+    width: 48px;
+    margin-left: -20px;
     cursor: pointer;
 }
 
 .container_2{
     display: flex;
 }
-.sahara{
-    margin-top: 190px;
-    margin-left: 120px;
-}
 
+.sahara{
+    padding-top: 200px;
+    padding-left: 120px;
+    width: 50%;
+}
 .sahara h1{
-font-weight: bolder;
-font-size: 110px;
+    font-weight: bolder;
+    font-size: 110px;
 }
 .sahara p{
     line-height: 1.5;
@@ -61,30 +59,28 @@ font-size: 110px;
 .explore{
     background-color: white;
     border-style: hidden;
-    font:14px Georgia, serif;
+    font: 14px Georgia, serif;
     color: black;
     padding: 10px;
     text-align: center;
-    width: 30%;
     border-radius: 25px;
     margin-top: 30px;
+    width: 30%;
 }
+
 .content{
-    /* display: grid; */
-    /* grid-template-columns: auto auto; */
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 200px;
-    margin-left: 100px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    row-gap: 40px;
+    column-gap: 60px;
+    margin-left: 80px;
 }
 .box{
-    border-radius: 15px;
     height: 250px;
-    width: 220px;
+    border-radius: 15px;
     padding: 15px 25px;
     background-size: cover;
+    background-position: center;
 }
 .box:hover{
     margin-top: -10px;
@@ -109,43 +105,89 @@ font-size: 110px;
     background-image: url(./pic-4.png);
 }
 
-@media only screen and ( max-width: 856px ) and (min-width: 500px )
+@media only screen  and (min-width: 550px ) and ( max-width: 900px )
 {
     body{
-        /* background-blend-mode: multiply; */
-        background-size: auto ;
+        background-size: 115% 45%;
+        background-position-x: center;
         background-repeat: repeat;
     }
     .logo{
         margin-left: 80px;
     }
     .navbar{
-       margin-right: 80px;
+       margin-right: 60px;
     }
     .container_2{
-        flex-wrap: wrap;
-        width: 100%;
+        flex-direction: column;
     }
     .sahara{
-        margin: 0px 80px;
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 80px;
+        padding-right: 60px;
     }
     .sahara h1{
-    font-size: 40px;
+        font-size: 40px;
     }
     .explore:hover{
         margin-bottom: 10px;
     }
 
     .content{
-        height: 1100px;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
+        grid-template-columns: 100%;
+        width: 60%;
+        margin-top: 30px;
+        margin-left: 22%;
     }
-    .box{
-        width: 100%;
-        background-position: center;
-    } 
 }
+
+@media only screen  and (min-width: 280px ) and ( max-width: 549px ) {
+    body{
+        background-size: 250% 40%;
+        background-position-x: center;
+        background-repeat: repeat;
+    }
+    .logo{
+        margin-left: 10px;
+        transform: scale(0.8);
+    }
+    .navbar{
+       margin-right: 20px;
+    }
+    .navbar>div{
+        font-size: 12px;
+        margin-right: 30px;
+    }
+    .container_2{
+        flex-direction: column;
+    }
+    .sahara{
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    .sahara h1{
+        font-size: 30px;
+    }
+    .sahara p{
+        font-size: 12px;
+    }
+    .explore{
+        font-size: 10px;
+        margin-top: 20px;
+        width: 25%;
+    }
+    .explore:hover{
+        margin-bottom: 10px;
+    }
+
+    .content{
+        grid-template-columns: 100%;
+        width: 70%;
+        margin-top: 30px;
+        margin-left: 10%;
+    }
+}
+
